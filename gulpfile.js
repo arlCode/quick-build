@@ -25,4 +25,9 @@ gulp.task('sass', function (error) {
 });
 
 // Start build task. - This is going to be updated in the future.
-gulp.task('default', gulp.series('sass'));
+gulp.task('default', function(){
+
+    return gulp.watch(path.sassFolder, gulp.series('sass'))
+});
+
+//TODO: Add the automated build feature for SASS.
